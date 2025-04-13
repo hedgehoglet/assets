@@ -1,17 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/t/7807688?s=200&v=4">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <title>Data Sandbox | Hedgehoglet</title>
-    <head>
-    <body class="bg-gray-100 font-sans fade">
-        <div id="main" class="min-h-screen flex items-center justify-center">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold text-gray-800 mb-4">Data Sandbox | Stay tuned for exciting updates!</h1>
-            </div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description"
+        content="Hedgehoglet: a tech squad crafting diverse applications to tackle everyday challenges.">
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/t/7807688?s=200&v=4">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <title>Data Sandbox | Hedgehoglet</title>
+    <style>
+        .fade {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans fade">
+    <div class="absolute top-0 right-0 p-4">
+        <a href="https://github.com/hedgehoglet/" target="_blank"
+            class="text-gray-600 hover:text-gray-800 mx-2 text-2xl">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/hedgehoglet/" target="_blank"
+            class="text-gray-600 hover:text-gray-800 mx-2 text-2xl">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+
+    <div class="min-h-screen py-10 px-6 max-w-6xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-800 mb-10 text-center">
+            🗃️ Hedgehoglet's Data Sandbox
+        </h1>
+
+        <div id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards will be injected here -->
         </div>
-    </body>
+    </div>
+
+    <script>
+        const dataFiles = [
+            {
+                file: "gcp_pca_2022.json",
+                description: "Google Cloud PCA 2022 dataset covering regional infrastructure."
+            },
+            {
+                file: "thailand_administrative_divisions.json",
+                description: "Thailand's provinces, districts, and subdistricts structure."
+            },
+            {
+                file: "webcrawl_enth_1k_2019.json",
+                description: "English-Thai web-crawled parallel dataset from 2019."
+            }
+        ];
+
+        const cardContainer = document.getElementById("cards");
+
+        dataFiles.forEach(({ file, description }) => {
+            const card = document.createElement("div");
+            card.className =
+                "bg-white rounded-xl shadow hover:shadow-lg transition-all duration-300 p-4 flex flex-col justify-between fade";
+
+            card.innerHTML = `
+        <div>
+          <div class="text-2xl mb-2">📄</div>
+          <h2 class="text-lg font-semibold text-gray-800 break-words">${file}</h2>
+          <p class="text-sm text-gray-500 mt-1">${description}</p>
+        </div>
+        <div class="mt-4">
+          <a href="data/json/${file}" target="_blank"
+            class="inline-block px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition">
+            🔗 Open File
+          </a>
+        </div>
+      `;
+
+            cardContainer.appendChild(card);
+        });
+    </script>
+</body>
+
 </html>

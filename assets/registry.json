@@ -1,0 +1,42 @@
+[
+  {
+    "file": "gcp_pca_2022.json",
+    "path": "assets/shared/json/gcp_pca_2022.json",
+    "icon": "☁️",
+    "format": "json",
+    "description": "Multiple-choice questions for the Google Cloud Associate Cloud Engineer exam, compiled in 2022.",
+    "tags": ["cloud", "quiz", "gcp"],
+    "size": "64 KB",
+    "added": "2023-12-06"
+  },
+  {
+    "file": "thailand_administrative_divisions.json",
+    "path": "assets/shared/json/thailand_administrative_divisions.json",
+    "icon": "🗺️",
+    "format": "json",
+    "description": "Thai provinces, districts, and sub-districts with bilingual names and zip codes.",
+    "tags": ["thailand", "geo", "administrative"],
+    "size": "2.9 MB",
+    "added": "2023-11-24"
+  },
+  {
+    "file": "webcrawl_enth_1k_2019.json",
+    "path": "assets/shared/json/webcrawl_enth_1k_2019.json",
+    "icon": "🌐",
+    "format": "json",
+    "description": "1,000 English–Thai sentence pairs from 2019 web-crawled data.",
+    "tags": ["nlp", "translation", "thai"],
+    "size": "432 KB",
+    "added": "2023-11-19"
+  },
+  {
+    "file": "gpu_thai_market_specs_202404.json",
+    "path": "assets/shared/json/gpu_thai_market_specs_202404.json",
+    "icon": "🖥️",
+    "format": "json",
+    "description": "GPU listings from the Thai market with specs and prices, as of April 2024.",
+    "tags": ["hardware", "gpu", "market"],
+    "size": "131 KB",
+    "added": "2025-04-14"
+  }
+]
